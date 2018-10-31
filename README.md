@@ -22,6 +22,7 @@ Copy and paste entire code block below.
 wget https://github.com/ucd-library/gh-dataset-pages/archive/master.zip && \
   unzip master.zip && \
   cp -r gh-dataset-pages-master/template/* . && \
+  cp -r gh-dataset-pages-master/template/.gitignore . && \
   rm -rf master.zip gh-dataset-pages-master
 ```
 
