@@ -1,0 +1,15 @@
+{% if site.github %}
+  <title>{{ site.github.project_title }}</title>
+  <meta property="og:title" content="{{ site.github.project_title }}" />
+  <meta property="og:site_name" content="{{ site.github.project_title}}" />
+  <meta name="description" content="{{ site.github.project_tagline }}" />
+  <meta property="og:description" content="{{ site.github.project_tagline }}" />
+  <link rel="canonical" href="{{ site.github.url }}" />
+  <meta property="og:url" content="{{ site.github.url }}" />
+{% endif %}
+  {% if site.author %}<meta name="author" content="{{ site.author.name }}" />{% endif %}
+  <meta name="generator" content="Jekyll v{{ jekyll.version }}" />
+  <meta property="og:locale" content="{{ site.lang | default: 'en_US' }}" />
+  {% if site.google_site_verification %}<meta name="google-site-verification" content="{{ site.google_site_verification }}" />{% endif %}
+
+  {% include jsonld.html %}

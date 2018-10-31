@@ -1,0 +1,41 @@
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "dataset",
+    "provider": {
+      "@type": "Organization",
+      "url": "https://github.com",
+      "name": "GitHub",
+      "description": "GitHub is where people build software. More than 28 million people use GitHub to discover, fork, and contribute to over 85 million projects."
+    }
+    {% if site.github %},"name": "{{site.github.project_title}}"{% endif %}
+    {% if site.github %},"description": "{{site.github.project_tagline}}"{% endif %}
+    {% if site.github %},"url": "{{site.github.url}}"{% endif %}
+    {% if site.datePublished %},"datePublished": "{{site.datePublished}}"{% endif %}
+    {% if site.genre %},"genre": "{{site.genre}}"{% endif %}
+    {% if site.publisher %},"publisher": {
+      "@type": "Organization"
+      {% if site.publisher.name %},"name": "{{site.publisher.name}}"{% endif %}
+      {% if site.publisher.url %},"url": "{{site.publisher.url}}"{% endif %}
+      {% if site.publisher.description %},"description": "{{site.publisher.description}}"{% endif %}
+    }{% endif %}
+    {% if site.github %},"distribution": [
+      {
+        "@type": "DataDownload",
+        "name": "{{site.github.project_title}} Releases",
+        "contentUrl": "{{site.github.releases_url}}",
+      }, 
+      {
+        "@type": "DataDownload",
+        "name": "{{site.github.project_title}} Git",
+        "contentUrl": "{{site.github.clone_url}}"
+      }
+    ]{% endif %}
+    {% if site.author %},"author": {
+      "@type": "Person"
+      {% if site.author.name %},"name": "{{site.author.name}}"{% endif %}
+      {% if site.author.email %},"email": "{{site.author.email}}"{% endif %}
+    }{% endif %}
+    {% if site.keywords %},"keywords": {{ site.keywords | jsonify }} {% endif %}
+  }
+  </script>

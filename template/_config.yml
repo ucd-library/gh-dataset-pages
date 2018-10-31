@@ -1,0 +1,28 @@
+# Welcome to Jekyll!
+#
+# This project is meant to auto generate a simple website with schema.org seo metadata.
+#
+# This config file is meant for settings that affect your whole dataset.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+
+#
+# Fill out dataset variables below
+#
+author:
+  name: 
+  email: 
+keywords:
+  - 
+genre:
+publisher:
+  name: 
+  url: 
+  description: 
+# ISO formatted, ex: "2016-03-09T17:27:20.578Z" 
+datePublished: 
+
+# Build settings
+markdown: kramdown
+theme: minima
