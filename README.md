@@ -42,11 +42,22 @@ publisher:
 datePublished: 
 ```
 
-Edit the ```index.md``` file and add content for your website
+Edit the ```index.md``` file and add content for your website.
 
-Push new branch to GitHub and set upstream tracking
+You can test the site locally by installing and running Jekyll.  Note: [Ruby/gem](https://www.ruby-lang.org/en/downloads/) required.
 
 ```bash
+gem install jekyll bundler
+bundle exec jekyll serve
+```
+Now visit http://localhost:4000 in your browser.
+
+
+Commit and push new branch to GitHub and set upstream tracking
+
+```bash
+git add --all
+git commit -m "initial commit of gh-pages website"
 git push --set-upstream origin gh-pages
 ```
 
